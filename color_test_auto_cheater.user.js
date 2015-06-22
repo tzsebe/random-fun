@@ -52,7 +52,7 @@ function cheatify() {
     // Extract desired score
     cheatsLeft = extractDesiredScore();
     
-    // Setup a timer that hits it once a second
+    // Setup a timer that hits it 10 times a second.
     cheatIntervalId = window.setInterval(highlightWinner, 100);
 }
 
