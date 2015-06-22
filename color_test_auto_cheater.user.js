@@ -14,7 +14,6 @@ function retrieveWinningDiv() {
     }
     
     var winningDiv = frame[0].contentWindow.document.getElementsByClassName('thechosenone');
-    
     if( ! winningDiv ) {
         return null;
     }
@@ -28,7 +27,6 @@ function highlightWinner() {
     if( cheatsLeft == 0 ) {
         // Stop processing.
         window.clearInterval(cheatIntervalId);
-        
     } else {
         winner = retrieveWinningDiv()
         if( winner ) {
