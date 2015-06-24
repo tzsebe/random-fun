@@ -28,7 +28,7 @@ function highlightWinner() {
         // Stop processing.
         window.clearInterval(cheatIntervalId);
     } else {
-        winner = retrieveWinningDiv()
+        var winner = retrieveWinningDiv()
         if( winner ) {
             winner.click();
             --cheatsLeft;
@@ -38,7 +38,7 @@ function highlightWinner() {
 
 function extractDesiredScore() {
     var re = /desiredScore=([0-9]+)/;
-    result = re.exec(location.search);
+    var result = re.exec(location.search);
     if( result ) {
         return result[1];
     } else {
