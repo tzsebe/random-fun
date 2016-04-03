@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>A Visual Explanation of BubbleSort</title>
+
+        <!-- Pull in all our styles. -->
+        <link rel="stylesheet" href="bootstrap.css" type="text/css"/>
+        <link rel="stylesheet" href="styles.css" type="text/css"/>
+
+        <!-- Pull in all our javascript. -->
+        <script src="jquery-1.12.2.min.js"></script>
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        <!-- Title Section -->
+        <h1>A Visual Explanation of Bubble Sort</h1>
+
+        <!-- Main content -->
+        <div class="container">
+
+            <!-- Explanation Section. -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Explanation</h2>
+
+                    <p>In the world of computer programming, one of the most standard problems one encounters, is the need to sort a set of elements. For example, if we have a list of values, <code>[4, 2, 6, 7, 8, 5, 4]</code>, to sort it is to place these numbers in increasing order: <code>[2, 4, 4, 5, 6, 7, 8]</code>. This is a well-studied field, and there are numerous algorithms available for the task. One such algorithm is known as <i>Bubble Sort</i>, and we will be discussing that here.</p>
+
+                    <p>One of the standard ways to measure performance of sorting algorithms is to think in terms of "swaps" (switching the positions of any two elements), and comparing how many swaps are needed on average to sort a random set of numbers.</p>
+
+                    <p>Bubble sort works by systematically going through, and swapping adjacent elements if they're out of order, repeating the process as needed. This results in the largest elements "bubbling up" to the end of the list, which is where the name of the algorithm comes from. Below, you will find a snippet of pseudo-code, as well as a visual representation of how it works, courtesy of <i>Wikipedia</i>.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2">
+                    <pre>
+procedure bubbleSort( A : list of sortable items )
+    n = length(A)
+    repeat
+       newn = 0
+       for i = 1 to n-1 inclusive do
+          if A[i-1] &gt; A[i] then
+             swap(A[i-1], A[i])
+             newn = i
+          end if
+       end for
+       n = newn
+    until n = 0
+end procedure
+                    </pre>
+                </div>
+                <div class="col-md-5">
+                    <img src="bubble_sort_animation.gif" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>It's very important to note that while Bubble Sort is a neat way to teach sorting and introduce the concept of algorithms to students of computer science, it's actually a relatively inefficient way to go about it. Sorting algorithms used in practice are much more sophisticated. Still, there is some elegance to its simplicity.</p>
+                </div>
+            </div>
+
+            <!-- Play with it section. -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Play With It!</h2>
+                    <p>To help you better understand how it works, now it's your turn to play with it! Fill in the fields below (or just hit 'Randomize' to have it randomly filled in for you), hit the 'Play' button, and watch the sorting algorithm unfold on your chosen values!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- Keeping this in a separate row for alignment purposes. -->
+                    <div id="execution-msg">.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- These are the actual elements that get sorted. -->
+                    <input type="text" class="sortable-entry" id="sortval0" value="0" onkeypress='return validateNumeric(event.charCode)' />
+                    <input type="text" class="sortable-entry" id="sortval1" value="0" onkeypress='return validateNumeric(event.charCode)' />
+                    <input type="text" class="sortable-entry" id="sortval2" value="0" onkeypress='return validateNumeric(event.charCode)' />
+                    <input type="text" class="sortable-entry" id="sortval3" value="0" onkeypress='return validateNumeric(event.charCode)' />
+                    <input type="text" class="sortable-entry" id="sortval4" value="0" onkeypress='return validateNumeric(event.charCode)' />
+                    <input type="text" class="sortable-entry" id="sortval5" value="0" onkeypress='return validateNumeric(event.charCode)' />
+                    <input type="text" class="sortable-entry" id="sortval6" value="0" onkeypress='return validateNumeric(event.charCode)' />
+                    <input type="text" class="sortable-entry" id="sortval7" value="0" onkeypress='return validateNumeric(event.charCode)' />
+                </div>
+                <div class="col-md-6">
+                    <input type="button" value="Randomize" onclick='randomizeInput()' />
+                    <input type="button" value="Play!" onclick='runBubbleSort()' />
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="bottom-section">
+            <ul>
+                <li><b>Author:</b> Tamas Zsebe</li>
+                <li><b>Last Updated:</b> 2016-04-02</li>
+                <li><b>Source:</b> Code snippet and animation are public domain, from <a href="https://en.wikipedia.org/wiki/Bubble_sort">Wikipedia: Bubble sort</a>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+html {
+    background: black; /* Hide obnoxious whitespace at the bottom... */
+}
+
+/*
+ * Styles for overall headers.
+ */
+
+/* Top banner. */
+h1 {
+    text-align: center; /* Center the text. */
+    background: skyblue; /* Set background color. */
+    color: lightcyan; /* Set text color. */
+    margin: 0; /* Reset margin so background extends everywhere. */
+    font-size: 5.5vw; /* Fill out the top nicely at any size. */
+}
+
+/* Section subheaders. */
+h2 {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+/* Start upscaling subheaders at 500px width. */
+@media (min-width: 500px) {
+    h2 {
+        /*
+         * CSS3 has the 'vw' (viewport width) modifier, which allows
+         * you to make things proportional to the window width. This basically makes
+         * the text change its font size responsively while resizing the window.
+         */
+        font-size: 3.3vw;
+    }
+}
+
+/*
+ * Styles for the Play With It section.
+ */
+
+/* Text boxes with the numbers we're sorting. */
+.sortable-entry {
+    width: 30;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* The red highlight when bubble sort is running. */
+.sort-highlighted {
+    border: 1px solid red;
+    color: red
+}
+
+/* The green highlight when bubble sort is done. */
+.sort-complete {
+    border: 1px solid green;
+    color: green
+}
+
+/* The little box where we show "swap" and "done" messages. */
+#execution-msg {
+    font-weight: bold;
+
+    /* We want to fade this in and out with jQuery animate(). opacity
+     * works really well for that. */
+    opacity: 0;
+}
+
+/*
+ * Styles for the footer.
+ */
+
+.bottom-section {
+    margin-top: 20px;
+    padding-top: 30px;
+    background: black;
+    color: white;
+}
+
+.bottom-section ul {
+    list-style-type: none;
+}
