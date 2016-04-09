@@ -1,0 +1,95 @@
+/**
+ * These styles come from a layout tutorial on CSSReset: http://www.cssreset.com/2010/css-tutorials/how-to-keep-footer-at-bottom-of-page-with-css/
+ */
+html,
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+#wrapper {
+    min-height:100%;
+    position:relative;
+}
+#header {
+}
+#content {
+    padding-bottom:100px;   /* Height of the footer element */
+}
+#footer {
+    width:100%;
+    height:100px;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+/* Top banner. */
+h1 {
+    text-align: center; /* Center the text. */
+    background: skyblue; /* Set background color. */
+    color: lightcyan; /* Set text color. */
+    margin: 0; /* Reset margin so background extends everywhere. */
+    font-size: 5.5vw; /* Fill out the top nicely at any size. */
+}
+
+/* Section subheaders. */
+h2 {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+/* Start upscaling subheaders at 500px width. */
+@media (min-width: 500px) {
+    h2 {
+        /*
+         * CSS3 has the 'vw' (viewport width) modifier, which allows
+         * you to make things proportional to the window width. This basically makes
+         * the text change its font size responsively while resizing the window.
+         */
+        font-size: 3.3vw;
+    }
+
+    h3 {
+        font-size: 2.8vw;
+    }
+}
+
+
+/*
+ * Styles for task list.
+ */
+.done-task {
+    color: green;
+}
+
+.done-task a {
+    text-decoration: line-through;
+    color: green;
+}
+
+/*
+ * Styles for task page.
+ */
+.task-attribute-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/*
+ * Styles for the footer.
+ */
+.bottom-section {
+    padding-top: 20px;
+    background: black;
+    color: white;
+}
+
+.bottom-section ul {
+    list-style-type: none;
+}
