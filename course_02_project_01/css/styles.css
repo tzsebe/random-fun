@@ -1,12 +1,11 @@
-/**
- * These styles come from a layout tutorial on CSSReset: http://www.cssreset.com/2010/css-tutorials/how-to-keep-footer-at-bottom-of-page-with-css/
- */
 html,
 body {
     margin:0;
     padding:0;
     height:100%;
 }
+
+/* These wrapper/content/header/footer styles come from a layout tutorial on CSSReset: http://www.cssreset.com/2010/css-tutorials/how-to-keep-footer-at-bottom-of-page-with-css/ */
 #wrapper {
     min-height:100%;
     position:relative;
